@@ -11,7 +11,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
                   }
                   )
     })*/
-    router.get('/crear',(req,res)=>{
+    router.put('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
           return( 
@@ -30,7 +30,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
                   )
            
     })
-    /* router.get('/modificar',(req,res)=>{
+     router.post('/modificar',(req,res)=>{
     if (!req.body) {
           return( 
               res.status(400).send(
@@ -86,7 +86,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
        
            
     })
-    router.get('/eliminar',(req,res)=>{
+    router.delete('/eliminar',(req,res)=>{
     if (!req.body) {
           return( 
               res.status(400).send(
@@ -103,5 +103,5 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
                   }
                   )
 
-    })*/
+    })
 module.exports = router;
