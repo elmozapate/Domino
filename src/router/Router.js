@@ -10,6 +10,6 @@ const Router=(server)=>{
                   }
                   )
   })
-  server.use('/',enrutadorUsers)
+  server.use('/usuarios',enrutadorUsers)
 }
 module.exports = Router
