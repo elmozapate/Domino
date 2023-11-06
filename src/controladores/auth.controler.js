@@ -63,8 +63,8 @@ router.put('/crear',(req,res)=>{
                   })
         )
        }
-      if (!req.body.data ||  typeof req.body.data !== "object" ||(  ( !req.body.data=== true ) ) || !modelValidator(req.body).validate){
-             console.log( typeof req.body.data, " type")
+      if (!req.body.data ||  typeof JSON.parse( req.body.data ) !== "object" ||(  ( !req.body.data=== true ) ) || !modelValidator(req.body).validate){
+             console.log( typeof JSON.parse( req.body.data ), " type")
         return(   res.status(401).send(
                   {
                       mensaje:!req.body.data? "falta usuario y contraseña":modelValidator(req.body).msg
