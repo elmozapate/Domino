@@ -1,19 +1,18 @@
 
-const modelValidator=()=>{
-    const login=(data)=>{
-      console.log("modelv",data)
+const modelValidator=(data)=>{
+    const login=(body)=>{
         let res={
             msg:"",
             validate:true
             }
-            if (!data.usuario&&res ||!data.password&&res ) {
+            if (!body.usuario||!body.password ) {
               res={
                   ...res,
-                  msg:!data.usuario? res.msg + "falta usuario" : res
+                  msg:!body.usuario? res.msg + "falta usuario" : res
               }
                   res={
                   ...res,
-                  msg:!data.password? res.msg + "falta password" : res
+                  msg:!body.password? res.msg + "falta password" : res
                   }
         res.validate=false
             }
@@ -21,6 +20,6 @@ const modelValidator=()=>{
         return res
 
     }
-
+data.task==="login"&& login (data.body)
 }
 module.exports=modelValidator
