@@ -5,7 +5,7 @@ try {
         const uri = "mongodb+srv://moet:moetzapata@cluster0.o52gvk2.mongodb.net/?retryWrites=true&w=majority";
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
         await client.connect().then(() => console.log('conectado a mongodb dataReq'))
-        let db = client.db('parqueaderoSanJoaq')
+        let db = client.db('dominoDb')
         
         const usuariosF = async () => {
             let dbUserRes = db.collection('usuarios')
