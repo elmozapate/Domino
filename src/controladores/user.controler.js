@@ -4,6 +4,16 @@ const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
     console.log("enrutamiento")
+    router.get('/',(req,res)=>{
+    console.log("users vacío")
+        res.status(201).send(
+                  {
+                      mensaje:'users vacío', 
+                      data:req.body
+                  }
+                  )
+    }
+    
     router.get('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
