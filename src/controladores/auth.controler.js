@@ -67,7 +67,7 @@ router.put('/crear',(req,res)=>{
              console.log( typeof req.body.data, " type")
         return(   res.status(401).send(
                   {
-                      mensaje:req.body.data? "falta usuario y contraseña":modelValidator(req.body).msg
+                      mensaje:!req.body.data? "falta usuario y contraseña":modelValidator(req.body).msg
                   })
              )
       }
