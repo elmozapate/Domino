@@ -1,10 +1,11 @@
 const login=( user,users)=>{
-const found = users.map((element) => {
-  if (element.usuario === user.usuario)
+  let founded=false
+users.map((element) => {
+  if (JSON.parse(element).usuario === user.usuario)
   {
-    return element
+    founded = element
   }
 });
-console.log(user,users,"authlogin",found)
+console.log(user,users,"authlogin",founded)
 }
 module.exports= login 
