@@ -13,6 +13,9 @@ class ServiciosAuth {
      login( task,data,token) {
          switch (task) {
              case 'login':
+                ( async ()=>{
+                  const res=  await 
+                })
                  console.log(data)
                  
                  return true
