@@ -20,9 +20,9 @@ try {
                 })
                        return true
 
-   }catch(eror){
-       (ñconsole.log('mo conectado a mongodb dataReq')
-       return false
+   }catch(error){
+       console.log(error,'mo conectado a mongodb dataReq')
+       return true
    }
 }
 module.exports=Basededatos
