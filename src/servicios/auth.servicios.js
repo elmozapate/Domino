@@ -20,9 +20,9 @@ class ServiciosAuth {
                   const res=  await basededatos("users")
                   const authRes=  LogAuth (JSON.parse(data),res)  
                     console.log(authRes,"@")
+                                     return authRes
                 }
                 req()                 
-                 return true
                  break;
              
              default:
