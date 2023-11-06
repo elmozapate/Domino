@@ -1,5 +1,5 @@
 
-const modelValidator=(data)=>{
+const modelValidator=(req)=>{
     const login=(body)=>{
         let res={
             msg:"",
@@ -21,6 +21,6 @@ const modelValidator=(data)=>{
         return res
 
     }
-data.task==="login"&& login (data.body)
+req.task==="login"&& login (req.data)
 }
 module.exports=modelValidator
