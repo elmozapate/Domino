@@ -1,3 +1,5 @@
+const Basededatos= require('../db/basededatos.js');
+const basededatos = Basededatos
 class ServiciosAuth {
     static _instanciaEstaticaAuth = null
      constructor(){}
@@ -14,10 +16,9 @@ class ServiciosAuth {
          switch (task) {
              case 'login':
                 ( async ()=>{
-                  const res=  await 
-                })
-                 console.log(data)
-                 
+                  const res=  await basededatos("users")
+                              console.log(res,"ir db")
+                })                 
                  return true
                  break;
              
