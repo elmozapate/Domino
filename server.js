@@ -6,7 +6,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const { json } = require('body-parser');
 
 
-const Router=require('./src/router/Router.js')
+const Router=require('./router/Router.js')
 const PORT = process.env.PORT || 3001;
 app.use(cors());
 Router(http)
