@@ -2,8 +2,6 @@ const express=require('express');
 const router=express.Router();
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
-const EnrutadorUsers=()=>{
-    console.log("enrutamiento")
   /*  router.get('/',(req,res)=>{
     console.log("users vacío")
         res.status(201).send(
@@ -106,5 +104,4 @@ const EnrutadorUsers=()=>{
                   )
 
     })*/
-}
-module.exports = EnrutadorUsers;
+module.exports = router;
