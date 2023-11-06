@@ -1,6 +1,6 @@
 
 const modelValidator=(req)=>{
-    const login=(body)=>{
+    const login=(body=  {usuario : false, password : false })=>{
         let res={
             msg:"",
             validate:true
