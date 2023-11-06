@@ -1,4 +1,5 @@
 const login=( user,users)=>{
-console.log(user,users,"authlogin")
+const found = users.find((element) => element.usuario === user.usuario);
+console.log(user,users,"authlogin",found)
 }
 module.exports= login 
