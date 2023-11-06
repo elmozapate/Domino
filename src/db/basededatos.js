@@ -15,6 +15,7 @@ try {
 
         }
         await usuariosF()
+               console.log(usuarios,' dbget')
         
                 client.close().then(() => { console.log('desconectado de mongodb get')
                 })
