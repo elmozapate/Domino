@@ -1,5 +1,6 @@
 const express=require('express');
 const router=express.Router();
+const modelValidator =require('../modelos/modelValidator.js');
 const ServiciosAuth= require('../servicios/auth.servicios.js');
   const Basededatos= require('../db/basededatos.js');
 const basededatos = Basededatos
@@ -62,6 +63,12 @@ router.put('/crear',(req,res)=>{
                   })
         )
        }
+      if ( !req.body.data || !modelValidator.login(req.body.data){
+      return(   res.status(401).send(
+                  {
+                      mensaje:req.body.data? "falta usuario y contraseña":modelValidator.login(req.body.data)
+                  })
+      }
        const respuesta = ServiciosAuth.login(req.body.task,req.body.data)
        if (!respuesta) {
               return(   res.status(401).send(
