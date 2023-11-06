@@ -25,8 +25,9 @@ class ServiciosAuth {
                     console.log(AuthRes,"@")
              
                       authRes=AuthRes
+                    return authRes
                 }
-                  req()
+                  let doit= async req()
              return authRes
                  break;
              
