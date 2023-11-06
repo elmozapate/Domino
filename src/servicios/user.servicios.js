@@ -2,7 +2,7 @@ class ServiciosUsuarios {
     static _instanciaEstaticaUsuarios = null
      constructor(){}
      static obtenerInstancia() {
-         
+         console.log(" estático")
          if (!ServiciosUsuarios._instanciaEstaticaUsuarios) {
              ServiciosUsuarios._instanciaEstaticaUsuarios = new ServiciosUsuarios()
          }
