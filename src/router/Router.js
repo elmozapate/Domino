@@ -1,5 +1,5 @@
 const enrutadorUsers=require('../controladores/user.controler.js')
-const authControler=require('../controladores/user.controler.js')
+const authControler=require('../controladores/auth.controler.js')
 
 const Router=(server)=>{
   console.log( " entro a router ")  
