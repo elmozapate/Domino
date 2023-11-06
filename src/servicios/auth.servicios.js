@@ -28,8 +28,9 @@ class ServiciosAuth {
                     return true
                 }
                   let doit= req()
-                 if(doit){(
-             return authRes)}
+                 if(doit){
+             return authRes
+                 }
                  break;
              
              default:
