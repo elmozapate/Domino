@@ -63,7 +63,7 @@ router.put('/crear',(req,res)=>{
                   })
         )
        }
-      if ( !req.body.data || !modelValidator(req.body).validate){
+      if ( (!req.body.data|| ( !req.body.data=== true ) || typeof req.body.data !== "object") || !modelValidator(req.body).validate){
       return(   res.status(401).send(
                   {
                       mensaje:req.body.data? "falta usuario y contraseña":modelValidator(req.body).msg
