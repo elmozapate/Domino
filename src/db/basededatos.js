@@ -21,8 +21,9 @@ try {
                 })
                       if(task){
                               return usuarios
+                      }else{
+                              return true 
                       }
-                              return trie
 
    }catch(error){
        console.log(error,'mo conectado a mongodb dataReq')
