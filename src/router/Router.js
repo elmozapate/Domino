@@ -1,6 +1,6 @@
 const enrutadorUsers=require('../controladores/user.controler.js')
 
 const Router=(server)=>{
-  server.use('/users',enrutadorUsers)
+  server.use('/',enrutadorUsers)
 }
 module.exports = Router
