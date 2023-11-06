@@ -1,8 +1,9 @@
 const express=require('express');
 const router=express.Router();
 const modelValidator =require('../modelos/modelValidator.js');
-const ServiciosAuth= require('../servicios/auth.servicios.js');
-  const Basededatos= require('../db/basededatos.js');
+const serviciosAuth= require('../servicios/auth.servicios.js');
+const ServiciosAuth==serviciosAuth.obtenerInstancia()
+const Basededatos= require('../db/basededatos.js');
 const basededatos = Basededatos
 router.put('/crear',(req,res)=>{
     console.log("crear")
