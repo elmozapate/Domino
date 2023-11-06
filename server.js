@@ -1,5 +1,5 @@
 const express = require('express');
-st Router=require('./src/router/Router.js')
+const Router=require('./src/router/Router.js')
 const PORT = process.env.PORT || 3001;
 const server = express()
 
