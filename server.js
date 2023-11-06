@@ -9,7 +9,7 @@ const { json } = require('body-parser');
 const Router=require('./router/Router.js')
 const PORT = process.env.PORT || 3001;
 app.use(cors());
-Router(http)
+Router(app)
 
 http.listen(PORT, () => {
   console.log("Servidor activo, escuchando en el puerto ",PORT)
