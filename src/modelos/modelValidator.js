@@ -5,7 +5,8 @@ const modelValidator=(req)=>{
             msg:"",
             validate:true
             }
-        const {usuario = false, password = false }= body
+        const usuario =body.usuario|| false
+            const password =body.password|| false
         try{
             if ((!usuario===true)||(!password===true)) {
               res={
