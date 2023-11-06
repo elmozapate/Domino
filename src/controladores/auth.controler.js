@@ -80,7 +80,14 @@ router.put('/crear',(req,res)=>{
            )
        }
         console.log( respuesta, "res servicio")
-         res.status(201).send(
+         if(!respuesta.existe ||!respuesta.auth){
+             return(   res.status(401).send(
+                  {
+                      mensaje:!respuesta.existe?" usuario desconocido" :' password erróneo'
+                  })
+           )
+         }
+        res.status(201).send(
                   {
                       mensaje:'task login correcto'
                   })
