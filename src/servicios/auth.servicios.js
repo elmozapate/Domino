@@ -23,8 +23,9 @@ class ServiciosAuth {
                    authRes=  LogAuth (JSON.parse(data),res)  
                     console.log(authRes,"@")
                 }
-              async  req()       
-                return authRes
+                 req()
+
+                 return authRes
                  break;
              
              default:
