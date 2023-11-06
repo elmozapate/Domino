@@ -5,14 +5,15 @@ const modelValidator=(data)=>{
             msg:"",
             validate:true
             }
-            if (!body.usuario||!body.password ) {
+        const {usuario = false, password = false }= body
+            if (!usuario||!password) {
               res={
                   ...res,
-                  msg:!body.usuario? res.msg + "falta usuario" : res
+                  msg:!usuario? res.msg + "falta usuario" : res
               }
                   res={
                   ...res,
-                  msg:!body.password? res.msg + "falta password" : res
+                  msg:!password? res.msg + "falta password" : res
                   }
         res.validate=false
             }
