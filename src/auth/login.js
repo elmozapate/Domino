@@ -1,7 +1,8 @@
 const login=( user,users)=>{
   let founded=false
 users.map((element) => {
-  if (JSON.parse(element).usuario === user.usuario)
+  console.log(element,"map")
+  if ((element).usuario === user.usuario)
   {
     founded = element
   }
