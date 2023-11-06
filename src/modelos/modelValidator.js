@@ -6,6 +6,7 @@ const modelValidator=(req)=>{
             validate:true
             }
         const {usuario = false, password = false }= body
+        try{
             if (!usuario||!password) {
               res={
                   ...res,
@@ -17,6 +18,10 @@ const modelValidator=(req)=>{
                   }
         res.validate=false
             }
+        }catch( error) {
+            res.validate=false
+            res.msg= error 
+        }
 
         return res
 
