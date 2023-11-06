@@ -15,10 +15,11 @@ class ServiciosAuth {
      login( task,data,token) {
          switch (task) {
              case 'login':
-                ( async ()=>{
+                let req= async ()=>{
                   const res=  await basededatos("users")
                               console.log(res,"ir db")
-                })                 
+                }
+                req()                 
                  return true
                  break;
              
