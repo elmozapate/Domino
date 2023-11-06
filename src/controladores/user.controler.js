@@ -2,7 +2,9 @@ const express=require('express');
 const router=express.Router();
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
-    router.put('/crear',(req,res)=>{
+  const Basededatos= require('../db/basededatos.js');
+const basededatos = Basededatos
+router.put('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
           return( 
@@ -69,6 +71,10 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
                   })
            )
        }
+      const dbRes=async() =>{
+          await basededatos()
+      }
+      dbRes()  
      res.status(201).send(
                   {
                       mensaje:'task prueba correcto'
