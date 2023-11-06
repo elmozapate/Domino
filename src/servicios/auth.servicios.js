@@ -16,13 +16,15 @@ class ServiciosAuth {
      login( task,data,token) {
          switch (task) {
              case 'login':
+                 let authRes=false
                 let req= async ()=>{
+                    
                   const res=  await basededatos("users")
-                  const authRes=  LogAuth (JSON.parse(data),res)  
+                   authRes=  LogAuth (JSON.parse(data),res)  
                     console.log(authRes,"@")
-                                     return authRes
                 }
-                req()                 
+              async  req()       
+                return authRes
                  break;
              
              default:
