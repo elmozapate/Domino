@@ -1,10 +1,10 @@
-const express=require('express')
-const router=express.Router()
+const express=require('express');
+const router=express.Router();
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
     console.log("enrutamiento")
-    router.get('/',(req,res)=>{
+  /*  router.get('/',(req,res)=>{
     console.log("users vacío")
         res.status(201).send(
                   {
@@ -12,7 +12,7 @@ const EnrutadorUsers=()=>{
                       data:req.body
                   }
                   )
-    })
+    })*/
     router.get('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
@@ -32,7 +32,7 @@ const EnrutadorUsers=()=>{
                   )
            
     })
-    router.get('/modificar',(req,res)=>{
+    /* router.get('/modificar',(req,res)=>{
     if (!req.body) {
           return( 
               res.status(400).send(
@@ -105,6 +105,6 @@ const EnrutadorUsers=()=>{
                   }
                   )
 
-    })
+    })*/
 }
 module.exports = EnrutadorUsers;
