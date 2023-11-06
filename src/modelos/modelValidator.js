@@ -1,13 +1,14 @@
 
 const modelValidator=(req)=>{
-    const login=(body=  {usuario : false, password : false })=>{
+    const login=(body)=>{
         let res={
             msg:"",
             validate:true
             }
-        const usuario =body.usuario|| false
-            const password =body.password|| false
         try{
+            
+        const usuario =body.usuario?body.usuario:false
+            const password =body.password? body.password:false
             if ((!usuario===true)||(!password===true)) {
               res={
                   ...res,
