@@ -26,7 +26,7 @@ class ServiciosAuth {
              
                     return  authRes
                 }
-                 req()
+                 async req()
 
                  break;
              
