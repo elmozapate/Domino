@@ -71,9 +71,7 @@ router.put('/crear',(req,res)=>{
                   })
              )
       }
-       const respuesta = ()=>{
-          const authRes= 
-              ServiciosAuth.login(req.body.task,req.body.data)
+          const authRes=  ServiciosAuth.login(req.body.task,req.body.data)
            if( authRes){
            if(!authRes.existe ||!authRes.auth){
              return(   res.status(401).send(
@@ -89,9 +87,8 @@ router.put('/crear',(req,res)=>{
 
        
         console.log( authRes, "res servicios")
-           }
+           
        }
-        respuesta()
     })
     router.delete('/eliminar',(req,res)=>{
     if (!req.body) {
