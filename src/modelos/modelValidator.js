@@ -7,7 +7,7 @@ const modelValidator=(req)=>{
         const login=(Body)=>{
             const body=JSON.parse( Body)
         try{
-            
+            console.log(body)
         const usuario =body.usuario?body.usuario:false
             const password =body.password? body.password:false
             if ((!usuario===true)||(!password===true)) {
