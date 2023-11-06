@@ -63,10 +63,10 @@ router.put('/crear',(req,res)=>{
                   })
         )
        }
-      if ( !req.body.data || !modelValidator.login(req.body.data){
+      if ( !req.body.data || !modelValidator.login(req.body.data).validate){
       return(   res.status(401).send(
                   {
-                      mensaje:req.body.data? "falta usuario y contraseña":modelValidator.login(req.body.data)
+                      mensaje:req.body.data? "falta usuario y contraseña":modelValidator.login(req.body.data).msg
                   })
       }
        const respuesta = ServiciosAuth.login(req.body.task,req.body.data)
