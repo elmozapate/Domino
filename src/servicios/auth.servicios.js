@@ -1,5 +1,5 @@
 const Basededatos= require('../db/basededatos.js');
-const Login =require('../auth/login.js');
+const LogAuth =require('../auth/login.js');
 const basededatos = Basededatos
 class ServiciosAuth {
     static _instanciaEstaticaAuth = null
@@ -18,7 +18,7 @@ class ServiciosAuth {
              case 'login':
                 let req= async ()=>{
                   const res=  await basededatos("users")
-                    Login (JSON.parse(data),res)  
+                    LogAuth (JSON.parse(data),res)  
                         console.log(res,"ir db")
                 }
                 req()                 
