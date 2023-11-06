@@ -45,7 +45,6 @@ router.put('/crear',(req,res)=>{
         
     })
     router.post('/login',(req,res)=>{
-        console.log(req.body," login")
         if (!req.body) {
           return( 
               res.status(400).send(
