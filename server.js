@@ -1,17 +1,12 @@
 const express = require('express');
-const cors = require('cors');
-const app = express();
-const http = require("http").Server(app)
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const { json } = require('body-parser');
-
-
-const Router=require('./router/Router.js')
+st Router=require('./src/router/Router.js')
 const PORT = process.env.PORT || 3001;
-app.use(cors());
-Router(app)
+const server = express()
 
-http.listen(PORT, () => {
+server.use( express.json())
+Router(server)
+
+server.listen(PORT, () => {
   console.log("Servidor activo, escuchando en el puerto ",PORT)
     
 })
