@@ -74,31 +74,25 @@ router.put('/crear',(req,res)=>{
        const respuesta =async ()=>{
           const authRes=await 
               ServiciosAuth.login(req.body.task,req.body.data)
+           if( authRes){
            return authRes
+           }
        }
 
-       if (!respuesta) {
-              return(   res.status(401).send(
-                  {
-                      mensaje:'task desconocido '
-                  })
-           )
-       }
-        console.log( respuesta, "res servicio")
-         if(!respuesta.existe ||!respuesta.auth){
+       if (respuesta) {
+           if(!respuesta.existe ||!respuesta.auth){
              return(   res.status(401).send(
                   {
                       mensaje:!respuesta.existe?" usuario desconocido" :' password erróneo'
                   })
            )
-         }
-        res.status(201).send(
+           }
+              res.status(201).send(
                   {
                       mensaje:'task login correcto'
                   })
-           
-       
-           
+       }
+        console.log( respuesta, "res servicios)
     })
     router.delete('/eliminar',(req,res)=>{
     if (!req.body) {
