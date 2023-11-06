@@ -3,6 +3,26 @@ const router=express.Router()
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
+    router.get('/',(req,res)=>{
+               console.log(req," vacío"); 
+       if (!req.body) {
+          return( 
+              res.status(400).send(
+                  {
+                      mensaje:'cuerpo vacio'
+                  }
+                  )
+           )
+       }
+ 
+            res.status(201).send(
+                  {
+                      mensaje:'datos', 
+                      data:req
+                  }
+                  )
+           
+    })
     router.get('/crear',(req,res)=>{
        if (!req.body) {
           return( 
