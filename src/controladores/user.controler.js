@@ -15,7 +15,8 @@ const EnrutadorUsers=()=>{
            
     })
     router.get('/crear',(req,res)=>{
-       if (!req.body) {
+    console.log("crear")
+        if (!req.body) {
           return( 
               res.status(400).send(
                   {
@@ -23,9 +24,7 @@ const EnrutadorUsers=()=>{
                   }
                   )
            )
-       }
-       console.log(req); 
- 
+       } 
             res.status(201).send(
                   {
                       mensaje:'datos', 
