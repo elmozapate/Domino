@@ -2,15 +2,6 @@ const express=require('express');
 const router=express.Router();
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
-  /*  router.get('/',(req,res)=>{
-    console.log("users vacío")
-        res.status(201).send(
-                  {
-                      mensaje:'users vacío', 
-                      data:req.body
-                  }
-                  )
-    })*/
     router.put('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
@@ -24,7 +15,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
        } 
             res.status(201).send(
                   {
-                      mensaje:'datos', 
+                      mensaje:'crear', 
                       data:req.body
                   }
                   )
@@ -43,7 +34,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
        console.log(req); 
        res.status(201).send(
                   {
-                      mensaje:'datos', 
+                      mensaje:'modificar', 
                       data:req.body
                   }
                   )
@@ -65,7 +56,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
         return( 
                 res.status(201).send(
                   {
-                      mensaje:'datos', 
+                      mensaje:'obtener', 
                       data:task
                   })
         )
@@ -98,7 +89,7 @@ const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
        }    
        res.status(201).send(
                   {
-                      mensaje:'datos', 
+                      mensaje:'eliminar', 
                       data:req.body
                   }
                   )
