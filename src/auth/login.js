@@ -7,6 +7,21 @@ users.map((element) => {
     founded = element
   }
 });
-console.log(user,users,"authlogin",founded)
+  if(!founded){
+    return ({
+      exist:false,
+      auth:false
+    })
+  }
+  if(founded.password!==user.password){
+    return ({
+      exist:true,
+      auth:false
+    })
+  }
+  return ({
+      exist:true,
+      auth:true
+    })
 }
 module.exports= login 
