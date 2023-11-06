@@ -44,6 +44,7 @@ const EnrutadorUsers=()=>{
         
     })
     router.get('/obtener',(req,res)=>{
+        console.log(req," petición")
         if (!req.body) {
           return( 
               res.status(400).send(
