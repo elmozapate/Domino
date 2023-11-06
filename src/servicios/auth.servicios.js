@@ -19,7 +19,6 @@ class ServiciosAuth {
                 let req= async ()=>{
                   const res=  await basededatos("users")
                     LogAuth (JSON.parse(data),res)  
-                        console.log(res,"ir db")
                 }
                 req()                 
                  return true
