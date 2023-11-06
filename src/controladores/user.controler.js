@@ -3,17 +3,7 @@ const router=express.Router()
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
-    router.get('/',(req,res)=>{
-           req.body &&   console.log(req.body," vacío")
- 
-            res.status(201).send(
-                  {
-                      mensaje:'datos', 
-                      data:req
-                  }
-                  )
-           
-    })
+    
     router.get('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
@@ -54,7 +44,7 @@ const EnrutadorUsers=()=>{
         
     })
     router.get('/obtener',(req,res)=>{
-        console.log(req," petición")
+        console.log(req.body," petición")
         if (!req.body) {
           return( 
               res.status(400).send(
