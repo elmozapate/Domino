@@ -4,7 +4,7 @@ const found = users.map((element) => {
   {
     return element
   }
-     );
+});
 console.log(user,users,"authlogin",found)
 }
 module.exports= login 
