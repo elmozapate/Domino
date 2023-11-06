@@ -25,10 +25,11 @@ class ServiciosAuth {
                     console.log(AuthRes,"@")
              
                       authRes=AuthRes
-                    return authRes
+                    return true
                 }
-                  let doit= async req()
-             return authRes
+                  let doit= req()
+                 if(doit){(
+             return authRes)}
                  break;
              
              default:
