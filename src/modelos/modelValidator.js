@@ -7,8 +7,14 @@ const modelValidator=()=>{
             validate:true
             }
             if (!data.usuario&&res ||!data.password&&res ) {
-                 !data.usuario&&res = res.msg + "falta usuario"
-        !data.password&&res = res.msg + "falta password"
+              res={
+                  ...res,
+                  msg:!data.usuario? res.msg + "falta usuario" : res
+              }
+                  res={
+                  ...res,
+                  msg:!data.password? res.msg + "falta password" : res
+                  }
         res.validate=false
             }
 
