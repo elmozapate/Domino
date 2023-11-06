@@ -20,14 +20,14 @@ class ServiciosAuth {
                 let req= async ()=>{
                     
                   const res=  await basededatos("users")
-                   authRes=  LogAuth (JSON.parse(data),res)  
+                   AuthRes=  LogAuth (JSON.parse(data),res)  
                                    
-                    console.log(authRes,"@")
+                    console.log(AuthRes,"@")
              
-                    return  authRes
+                      authRes=AuthRes
                 }
-                 async req()
-
+                  req()
+             return authRes
                  break;
              
              default:
