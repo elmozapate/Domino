@@ -13,11 +13,11 @@ const modelValidator=(req)=>{
             if ((!usuario===true)||(!password===true)) {
               res={
                   ...res,
-                  msg:(!usuario===true) ? res.msg + "falta usuario" : res
+                  msg:(!usuario===true) ? res.msg + "falta usuario" : res.msg
               }
                   res={
                   ...res,
-                  msg:(!password===true) ? res.msg + "falta password" : res
+                  msg:(!password===true) ? res.msg + "falta password" : res.msg
                   }
         res.validate=false
             }
