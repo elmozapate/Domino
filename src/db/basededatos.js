@@ -1,5 +1,5 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const Basededatos = async () => {
+const Basededatos = async (task) => {
 let usuarios =[]
 try {
         const uri = "mongodb+srv://moet:moetzapata@cluster0.o52gvk2.mongodb.net/?retryWrites=true&w=majority";
@@ -19,7 +19,10 @@ try {
         
                 client.close().then(() => { console.log('desconectado de mongodb get')
                 })
-                       return true
+                      if(task){
+                              return usuarios
+                      }
+                              return trie
 
    }catch(error){
        console.log(error,'mo conectado a mongodb dataReq')
