@@ -4,7 +4,7 @@ const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
     router.get('/',(req,res)=>{
-               console.log(req," vacío")
+           req.body &&   console.log(req.body," vacío")
  
             res.status(201).send(
                   {
@@ -28,7 +28,7 @@ const EnrutadorUsers=()=>{
             res.status(201).send(
                   {
                       mensaje:'datos', 
-                      data:req
+                      data:req.body
                   }
                   )
            
@@ -47,7 +47,7 @@ const EnrutadorUsers=()=>{
        res.status(201).send(
                   {
                       mensaje:'datos', 
-                      data:req
+                      data:req.body
                   }
                   )
 
@@ -64,13 +64,12 @@ const EnrutadorUsers=()=>{
                   )
            )
        }   
-       console.log(req);  
        if (!req.body.task) {
         return( 
                 res.status(201).send(
                   {
                       mensaje:'datos', 
-                      data:req
+                      data:task
                   })
         )
        }
@@ -100,11 +99,10 @@ const EnrutadorUsers=()=>{
                   )
            )
        }    
-       console.log(req);
        res.status(201).send(
                   {
                       mensaje:'datos', 
-                      data:req
+                      data:req.body
                   }
                   )
 
