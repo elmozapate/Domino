@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router()
-const ServiciosUsuarios= require('../servicios/user.servicios.js');
+const ServiciosUsuarios= require('./../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
     router.get('/crear',(req,res)=>{
