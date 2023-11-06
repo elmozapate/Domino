@@ -12,8 +12,7 @@ const EnrutadorUsers=()=>{
                       data:req.body
                   }
                   )
-    }
-    
+    })
     router.get('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
