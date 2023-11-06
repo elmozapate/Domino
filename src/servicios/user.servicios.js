@@ -11,6 +11,7 @@ class ServiciosUsuarios {
              )
      }
      agregar( task,data,token) {
+                         console.log(" agregar ", task,data,token)
          switch (task) {
              case 'test':
                  console.log(data)
