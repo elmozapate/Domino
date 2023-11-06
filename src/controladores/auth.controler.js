@@ -68,6 +68,7 @@ router.put('/crear',(req,res)=>{
                   {
                       mensaje:req.body.data? "falta usuario y contraseña":modelValidator.login(req.body.data).msg
                   })
+             )
       }
        const respuesta = ServiciosAuth.login(req.body.task,req.body.data)
        if (!respuesta) {
