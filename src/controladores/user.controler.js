@@ -3,7 +3,7 @@ const router=express.Router()
 const ServiciosUsuarios= require('../servicios/user.servicios.js');
 const serviciosUsuarios=ServiciosUsuarios.obtenerInstancia()
 const EnrutadorUsers=()=>{
-    
+    console.log("enrutamiento")
     router.get('/crear',(req,res)=>{
     console.log("crear")
         if (!req.body) {
