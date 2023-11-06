@@ -71,7 +71,7 @@ router.put('/crear',(req,res)=>{
                   })
              )
       }
-       const respuesta = ServiciosAuth.login(req.body.task,req.body.data)
+       const respuesta =async ServiciosAuth.login(req.body.task,req.body.data)
        if (!respuesta) {
               return(   res.status(401).send(
                   {
