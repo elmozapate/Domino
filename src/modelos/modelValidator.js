@@ -1,10 +1,10 @@
 
 const modelValidator=(req)=>{
-    const login=(body)=>{
-        let res={
+    let res={
             msg:"",
             validate:true
-            }
+    }
+        const login=(body)=>{
         try{
             
         const usuario =body.usuario?body.usuario:false
@@ -25,9 +25,9 @@ const modelValidator=(req)=>{
             res.msg= error 
         }
 
-        return res
 
     }
 req.task==="login"&& login (req.data)
+            return res
 }
 module.exports=modelValidator
