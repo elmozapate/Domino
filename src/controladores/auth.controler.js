@@ -42,8 +42,8 @@ router.put('/crear',(req,res)=>{
 
         
     })
-    router.get('/obtener',(req,res)=>{
-        console.log(req.body," petición")
+    router.post('/login',(req,res)=>{
+        console.log(req.body," login")
         if (!req.body) {
           return( 
               res.status(400).send(
@@ -76,7 +76,7 @@ router.put('/crear',(req,res)=>{
       dbRes()  
      res.status(201).send(
                   {
-                      mensaje:'task prueba correcto'
+                      mensaje:'task login correcto'
                   })
            
        
