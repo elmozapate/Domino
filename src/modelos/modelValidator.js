@@ -4,7 +4,8 @@ const modelValidator=(req)=>{
             msg:"",
             validate:true
     }
-        const login=(body)=>{
+        const login=(Body)=>{
+            const body=JSON.parse( Body)
         try{
             
         const usuario =body.usuario?body.usuario:false
