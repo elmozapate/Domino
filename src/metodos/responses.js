@@ -1,7 +1,7 @@
 const Responses = (props)=> {
     const {
         res=false,
-        code: 400,
+        code= 400,
         data = ""
     } = props
     if (res && (!res !== true)) {
