@@ -27,12 +27,12 @@ router.put('/crear',(req,res)=>{
            
     })
      router.post('/modificar',(req,res)=>{
-    if (!req.body) {
+    if (!req.body ||  !req.body.task) {
           return( 
               Res(res,400, "error pero bien")
            )
        }   
-       console.log(req); 
+       console.log("paso"); 
        res.status(201).send(
                   {
                       mensaje:'modificar', 
