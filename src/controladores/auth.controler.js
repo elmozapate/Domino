@@ -30,7 +30,7 @@ router.put('/crear',(req,res)=>{
     if (!req.body ||  !req.body.task) {
                    console.log("aca")
         return( 
-              Res(res,400, "error pero bien")
+              Res({ res:res,code:400, mensaje:"error pero bien" })
 
           )
        }   
