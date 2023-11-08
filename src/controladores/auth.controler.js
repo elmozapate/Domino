@@ -54,20 +54,20 @@ router.put('/crear',(req,res)=>{
                   )
            )
        }   
-       if (!req.body.task) {
+       if (( !req.body.task )===true) {
         return( 
-                res.status(201).send(
+                res.status(400).send(
                   {
-                      mensaje:'obtener', 
-                      data:task
-                  })
+                      mensaje:'task vacio'
+                  }
+                  )
         )
        }
-      if (!req.body.data ||  typeof JSON.parse( req.body.data ) !== "object" ||(  ( !req.body.data=== true ) ) || !modelValidator(req.body).validate){
+      if (!req.body.data || !req.body.task||  typeof JSON.parse( req.body.data ) !== "object" ||(  ( !req.body.data=== true ) ) || !modelValidator(req.body).validate){
              console.log( typeof JSON.parse( req.body.data ), " type")
         return(   res.status(401).send(
                   {
-                      mensaje:!req.body.data? "falta usuario y contraseña":modelValidator(req.body).msg
+                      mensaje:!req.body.data? "falta usuario y contraseña":!req.body.task? "faltan datos":modelValidator(req.body).msg
                   })
              )
       }
