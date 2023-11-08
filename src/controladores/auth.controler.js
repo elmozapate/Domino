@@ -3,6 +3,8 @@ const router=express.Router();
 const modelValidator =require('../modelos/modelValidator.js');
 const serviciosAuth= require('../servicios/auth.servicios.js');
 const ServiciosAuth=serviciosAuth.obtenerInstancia()
+const Responses= require('../metodos/responses.js');
+const Res = Responses ;
 const Basededatos= require('../db/basededatos.js');
 const basededatos = Basededatos
 router.put('/crear',(req,res)=>{
@@ -27,11 +29,7 @@ router.put('/crear',(req,res)=>{
      router.post('/modificar',(req,res)=>{
     if (!req.body) {
           return( 
-              res.status(400).send(
-                  {
-                      mensaje:'cuerpo vacio'
-                  }
-                  )
+              Res(res,400, "error pero bien")
            )
        }   
        console.log(req); 
@@ -109,4 +107,3 @@ router.put('/crear',(req,res)=>{
 
     })
 module.exports = router;
-          
